@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/css/site")
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-logo logo" href="~/">LOGO</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/"><i class="fa fa-code"></i> &nbsp;在线代码</a></li>
+                        <li><a href="/"><i class="fa fa-balance-scale" aria-hidden="true"></i> &nbsp;文本比较</a></li>
+                        <li><a href="/"><i class="fa fa-download"></i> &nbsp;jQuery下载</a></li>
+                        <li><a href="/" target="_blank"><i class="fa fa-ship" aria-hidden="true"></i> &nbsp;前端库</a></li>
+                        <li><a href="/" target="_blank"><i class="fa fa-book"></i> &nbsp;在线手册</a></li>
+                        <li class="dropdown"><a rel="nofollow" href="/" target="_blank"><i class="fa fa-weibo"></i> &nbsp;微博</a></li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#myModal">
+                                <i class="fa fa-user"></i> &nbsp;注册/登录<span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+    <footer class="container">
+        <p>&copy; @DateTime.Now.Year</p>
+    </footer>
+    <div class="back-to-top"><a><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
+    @Scripts.Render("~/js/jquery")
+    @Scripts.Render("~/js/main")
+    @RenderSection("scripts", false)
+</body>
+</html>

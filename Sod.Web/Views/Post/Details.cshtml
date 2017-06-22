@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <br />
+        RouteData Values:<hr />
+        @Html.Raw(string.Join("<br />", ViewContext.RouteData.Values.Select(x=>string.Format("key:{0},value:{1}",x.Key,x.Value))))
+        <br />
+        <br />
+        Request.Params:<hr/>
+        @Html.Raw(string.Join("<br />", Request.QueryString.AllKeys.ToDictionary(x=>x,x=>Request.Params[x]).Select(x => string.Format("key:{0},value:{1}", x.Key, x.Value))))
+        <br />
+        <br />
+        Request.Params:<hr/>
+        @Html.Raw(string.Join("<br />", Request.Form.AllKeys.ToDictionary(x=>x,x=>Request.Params[x]).Select(x => string.Format("key:{0},value:{1}", x.Key, x.Value))))
+    </div>
+</body>
+</html>
