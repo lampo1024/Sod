@@ -55,6 +55,7 @@
     <Compile Include="QueryModel\MyCollectionQueryModel.cs" />
     <Compile Include="QueryModel\MyFavoriteQueryModel.cs" />
     <Compile Include="QueryModel\PostArchive.cs" />
+    <Compile Include="Options.cs" />
     <Compile Include="Tag.cs" />
     <Compile Include="TagPostMapping.cs" />
     <Compile Include="TsCollection.cs" />
